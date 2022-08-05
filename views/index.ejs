@@ -51,8 +51,8 @@
       <div class="ps-row ps-padding-64" id="menu">
         <div class="ps-col l6 ps-padding-large">
           <h1 class="ps-center">Nuestro Menu</h1>
-          <% products.forEach(product => { %>   <!-- Armo un forEach que me permita iterar sobre el array de objetos literales llamado products que armé en el productsController, de manera tal que pueda ir mostrando cada uno de los platos del menú. De esta manera incorporo lenguaje JS en mi HTML (EJS) y me evito tener que hacer un article por cada plato del menú -->
-            <h4> <a href="/products/detail/<%= product.id %>"><%=product.title%> </a></h4> <!-- Hago que el título del plato sea clickeable, según el ID que me den-->
+          <% products.forEach(product => { %>   <!-- Armo un forEach que me permita iterar sobre el array de objetos literales guardado en DATA e importado en productsControllers, de manera tal que pueda ir mostrando cada uno de los platos del menú. De esta manera incorporo lenguaje JS en mi HTML (EJS) y me evito tener que hacer un article por cada plato del menú. Los incorporo utlizando, por ejemplo, product.description, product.price, etc y así accedo a la información de cada atributo del objeto literal -->
+            <h4> <a href="/products/detail/<%= product.id %>"><%=product.title%> </a></h4> <!-- Hago que el título del plato sea clickeable, según el ID que me den, incorporando la etiqueta a con un href que apunte al ID-->
             <p class="ps-text-grey">
               <%= product.description%> U$S <%=product.price%>  
             </p>
